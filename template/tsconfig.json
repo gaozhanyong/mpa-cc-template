@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictPropertyInitialization": true,
+    "outDir": "./build/",
+    "sourceMap": true,
+    "module": "commonjs",
+    "target": "es5"
+  },
+  "include": [
+    "./src/**/*"
+  ]
+}

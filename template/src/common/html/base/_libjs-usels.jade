@@ -1,0 +1,46 @@
+mixin libjs-usels()
+  if isdev
+    if lsv == 0
+      script(id="vue.2.6.6")
+        include ../../../public/js/lib/vue.2.6.6/vue.2.6.6.js
+      script $LB.sv('vue.2.6.6')
+      script(id="vue-router.2.7.0")
+        include ../../../public/js/lib/vue-router.2.7.0/vue-router.2.7.0.js
+      script $LB.sv('vue-router.2.7.0')
+      script(id="vuex.2.3.1")
+        include ../../../public/js/lib/vuex.2.3.1/vuex.2.3.1.js
+      script $LB.sv('vuex.2.3.1')
+      script(id="axios.0.16.1")
+        include ../../../public/js/lib/axios.0.16.1/axios.0.16.1.js
+      script $LB.sv('axios.0.16.1')
+      script(id="moment.2.18.1")
+        include ../../../public/js/lib/moment.2.18.1/moment.2.18.1.js
+      script $LB.sv('moment.2.18.1');$LB.dc('lsv')
+    else
+      script.
+        $LB.ld([
+          ['vue.2.6.6', 'js', #{nols}],
+          ['vue-router.2.7.0', 'js', #{nols}],
+          ['vuex.2.3.1', 'js', #{nols}],
+          ['axios.0.16.1', 'js', #{nols}],
+          ['moment.2.18.1', 'js', #{nols}]
+        ]);
+  else
+    if lsv == 0
+      script(id="vue.2.6.6.min")
+        include ../../../public/js/lib/vue.2.6.6/vue.2.6.6.min.js
+      script $LB.sv('vue.2.6.6.min', 'js')
+      script(id="vue-router.2.7.0.min")
+        include ../../../public/js/lib/vue-router.2.7.0/vue-router.2.7.0.min.js
+      script $LB.sv('vue-router.2.7.0.min', 'js')
+      script(id="vuex.2.3.1.min")
+        include ../../../public/js/lib/vuex.2.3.1/vuex.2.3.1.min.js
+      script $LB.sv('vuex.2.3.1.min', 'js')
+      script(id="axios.0.16.1.min")
+        include ../../../public/js/lib/axios.0.16.1/axios.0.16.1.min.js
+      script $LB.sv('axios.0.16.1.min')
+      script(id="moment.2.18.1.min")
+        include ../../../public/js/lib/moment.2.18.1/moment.2.18.1.min.js
+      script $LB.sv('moment.2.18.1.min');$LB.dc('lsv')
+    else
+      script $LB.ld([['vue.2.6.6.min','js',#{nols}],['vue-router.2.7.0.min','js',#{nols}],['vuex.2.3.1.min','js',#{nols}],['axios.0.16.1.min', 'js', #{nols}], ['moment.2.18.1.min','js',#{nols}]]);

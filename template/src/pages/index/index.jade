@@ -1,0 +1,22 @@
+extends ../../common/html/_base
+
+block meta
+  +favicon()
+  +meta-seo()
+  +meta-h5()
+  if useLs
+    if isdev
+      include ../../common/html/base/_seed
+    else
+      include ../../common/html/base/_seed-min
+
+block libcss
+
+block css
+  link(rel="stylesheet" href="/static/pages/index/index.css")
+
+block main
+  #root
+
+block js
+  script(src="/static/pages/index/index.js")

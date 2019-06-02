@@ -1,0 +1,53 @@
+{
+  "prompts": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "label": "Project name, single word, no space or punctuations"
+    },
+    "description": {
+      "type": "string",
+      "required": true,
+      "label": "Project description",
+      "default": "A MPA project"
+    },
+    "author": {
+      "type": "string",
+      "label": "Author"
+    },
+    "license": {
+      "type": "string",
+      "label": "License",
+      "default": "MIT"
+    },
+    "host": {
+      "type": "string",
+      "required": true,
+      "label": "Web site host name, like 'google'"
+    },
+    "port": {
+      "type": "number",
+      "required": true,
+      "default": 8080,
+      "label": "dev server port"
+    },
+    "needDoc": {
+      "type": "confirm",
+      "label": "Do you want to use doc"
+    },
+    "useproxy": {
+      "type": "confirm",
+      "label": "Do you want to enable proxy table?"
+    },
+    "sitemap": {
+      "type": "confirm",
+      "label": "Do you want to use a sitemap?"
+    }
+  },
+  "filters" : {
+    "proxy.*": "useproxy",
+    "src/common/html/sitemap.xml": "sitemap",
+    "docs/**/*": "needDoc"
+  },
+  "completeMessage": "{{#inPlace}}To get started:\n\n  npm install\n  npm start{{else}}To get started:\n\n  cd {{destDirName}}\n  npm install\n  npm start{{/inPlace}}"
+}

@@ -1,0 +1,13 @@
+mixin libjs-nols()
+  if isdev
+    script(src="/static/public/js/lib/vue.2.6.6/vue.2.6.6.js")
+    script(src="/static/public/js/lib/vue-router.2.7.0/vue-router.2.7.0.js")
+    script(src="/static/public/js/lib/vuex.2.3.1/vuex.2.3.1.js")
+    script(src="/static/public/js/lib/axios.0.16.1/axios.0.16.1.js")
+    script(src="/static/public/js/lib/moment.2.18.1/moment.2.18.1.js")
+  else
+    script(src="/static/public/js/lib/vue.2.6.6/vue.2.6.6.min.js")
+    script(src="/static/public/js/lib/vue-router.2.7.0/vue-router.2.7.0.min.js")
+    script(src="/static/public/js/lib/vuex.2.3.1/vuex.2.3.1.min.js")
+    script(src="/static/public/js/lib/axios.0.16.1/axios.0.16.1.min.js")
+    script(src="/static/public/js/lib/moment.2.18.1/moment.2.18.1.min.js")

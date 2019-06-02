@@ -1,0 +1,32 @@
+//- Base template for all pages that
+//- need vue,vuex,vue-router,vue-i18n, axios and moment
+include ./base/_global-vars
+include ./base/_global-mixins
+include ./base/_libjs-nols
+include ./base/_libjs-usels
+doctype html
+block vars
+  -var bodyClass=""
+  -var htmlClass=""
+
+html(class="#{htmlClass}")
+  head
+    meta(content="charset=utf-8")
+    block meta
+    block script
+    block title
+      title #{websiteTitle}
+    block libcss
+    block css
+    block headjs
+
+  body(class="#{bodyClass}")
+    block main
+    block before-libjs
+    block libjs
+      if useLs
+        +libjs-usels()
+      else
+        +libjs-nols()
+
+    block js

@@ -1,0 +1,8 @@
+{
+  "dev": {
+    "/api/": "http://a1-api.test.com"
+  },
+  "prod": {
+    "/api/": "http://api.test.com"
+  }
+}
