@@ -12,3 +12,7 @@ $ npm run doc
 $ npm run serve:doc
 {{/if_eq}}
 ```
+
+```shell
+$ export GAME={game_name} && npm run start:cocos
+```
